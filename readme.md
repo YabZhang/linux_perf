@@ -31,8 +31,9 @@
 
 
 * CPU 性能篇
-
-1. [平均负载](https://github.com/YabZhang/linux_perf/blob/master/cpu/load_average.md)
-
-2. [上下文切换](https://github.com/YabZhang/linux_perf/blob/master/cpu/load_average.md)
+  1. [平均负载](https://github.com/YabZhang/linux_perf/blob/master/cpu/load_average.md)
+  2. [上下文切换](https://github.com/YabZhang/linux_perf/blob/master/cpu/load_average.md)
+  3. [CPU使用率](https://github.com/YabZhang/linux_perf/blob/master/cpu/cpu_usage.md)
+  4. [案例1：系统CPU很高，却找不到应用](https://github.com/YabZhang/linux_perf/blob/master/cpu/case1_cpu_usage.md)
+  5. [案例2：系统中出现大量的不可中断进程和僵尸进程](https://github.com/YabZhang/linux_perf/blob/master/cpu/case2_iowait.md)
 
