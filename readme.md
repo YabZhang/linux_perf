@@ -44,7 +44,7 @@
 6. [软中断](https://github.com/YabZhang/linux_perf/blob/master/cpu/soft_interrupt.md)
 
 7. [CPU套路篇](https://github.com/YabZhang/linux_perf/blob/master/cpu/soft_interrupt.md)
-8. CPU阶段总结和答疑
+8. [CPU性能答疑](https://github.com/YabZhang/linux_perf/blob/master/cpu/qa.md)
 
 
 
