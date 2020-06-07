@@ -41,3 +41,23 @@
 4. [案例1：系统CPU很高，却找不到应用](https://github.com/YabZhang/linux_perf/blob/master/cpu/case1_cpu_usage.md)
 
 5. [案例2：系统中出现大量的不可中断进程和僵尸进程](https://github.com/YabZhang/linux_perf/blob/master/cpu/case2_iowait.md)
+6. [软中断](https://github.com/YabZhang/linux_perf/blob/master/cpu/soft_interrupt.md)
+
+7. [CPU套路篇](https://github.com/YabZhang/linux_perf/blob/master/cpu/soft_interrupt.md)
+8. CPU阶段总结和答疑
+
+
+
+* 内存性能篇
+
+1. Buffer & Cache
+2. Swap 交换空间
+3. 内存套路篇
+
+
+
+* I/O性能篇
+
+* 网络性能篇
+
+* 综合实战篇
