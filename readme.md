@@ -43,7 +43,7 @@
 5. [案例2：系统中出现大量的不可中断进程和僵尸进程](https://github.com/YabZhang/linux_perf/blob/master/cpu/case2_iowait.md)
 6. [软中断](https://github.com/YabZhang/linux_perf/blob/master/cpu/soft_interrupt.md)
 
-7. [CPU套路篇](https://github.com/YabZhang/linux_perf/blob/master/cpu/soft_interrupt.md)
+7. [CPU分析套路篇](https://github.com/YabZhang/linux_perf/blob/master/cpu/soft_interrupt.md)
 8. [CPU性能答疑](https://github.com/YabZhang/linux_perf/blob/master/cpu/qa.md)
 
 
@@ -51,6 +51,7 @@
 * 内存性能篇
 
 1. [Linux 内存基础](https://github.com/YabZhang/linux_perf/blob/master/memory/linux_memory.md)
+2. [内存分析套路](https://github.com/YabZhang/linux_perf/blob/master/memory/summary.md)
 
 
 
