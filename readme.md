@@ -57,6 +57,9 @@
 
 * I/O性能篇
 
+1. [Linux 文件系统](https://github.com/YabZhang/linux_perf/blob/master/io/filesys.md)
+2. [磁盘 IO 原理](https://github.com/YabZhang/linux_perf/blob/master/io/disk_io.md)
+
 
 
 * 网络性能篇
