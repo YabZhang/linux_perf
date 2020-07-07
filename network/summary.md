@@ -63,3 +63,71 @@ $ dig +trace +nodnssec {host}  # trace解析的中间节点
 tcpdump 抓包例子：https://hackertarget.com/tcpdump-examples/
 
 Wireshark Doc: https://www.wireshark.org/docs/
+
+
+
+#### 案例分析
+
+
+
+案例1：网络请求延迟分析
+
+网络请求延迟分析：
+
+1. 网络延迟导致传输慢;
+
+   常用指标: RTT(Round-Trip Time) 衡量
+
+   检测工具: `ping` => `ICMP`； 若`ICMP`被关闭（防止攻击）；可以使用`tcp`或者`udp`模式测量网络延迟;
+
+   ```bash
+   # -c表示发送3次请求，-S表示设置TCP SYN，-p表示端口号为80
+   $ hping3 -c 3 -S -p 80 baidu.com
+   HPING baidu.com (eth0 123.125.115.110): S set, 40 headers + 0 data bytes
+   len=46 ip=123.125.115.110 ttl=51 id=47908 sport=80 flags=SA seq=0 win=8192 rtt=20.9 ms
+   
+   --- baidu.com hping statistic ---
+   3 packets transmitted, 3 packets received, 0% packet loss
+   round-trip min/avg/max = 20.9/20.9/20.9 ms
+   
+   
+   # --tcp表示使用TCP协议，-p表示端口号，-n表示不对结果中的IP地址执行反向域名解析
+   $ traceroute --tcp -p 80 -n baidu.com
+   traceroute to baidu.com (123.125.115.110), 30 hops max, 60 byte packets
+    1  * * *
+    2  * * *
+    3  * * *
+    4  * * *
+    5  * * *
+    6  * * *
+    7  * * *
+    8  * * *
+    9  * * *
+   10  * * *
+   11  * * *
+   12  * * *
+   13  * * *
+   14  123.125.115.110  20.684 ms *  20.798 ms
+   ```
+
+   
+
+2. Linux 内核协议栈报文处理慢；
+
+   解析和分析协议, 工具: `tcpdump` 和 `wireshark`, 以及`strace`分析系统调用
+
+3. 应用程序数据处理慢，导致延迟；
+
+   单次请求和并发请求测试: `hping3` 和 `wrk`
+
+常用分析工具:
+
+* 使用 hping3 以及 wrk 等工具，确认单次请求和并发请求情况的网络延迟是否正常。
+* 使用 traceroute，确认路由是否正确，并查看路由中每一跳网关的延迟。
+* 使用 tcpdump 和 Wireshark，确认网络包的收发是否正常。
+* 使用 strace 等，观察应用程序对网络套接字的调用情况是否正常。
+
+
+
+案例2:  NAT 性能优化
+
